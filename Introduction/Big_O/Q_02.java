@@ -3,7 +3,6 @@ package Big_O;
 /*
  * The following code computes a^b
  * What is its runtime?
- *
  */
 
 public class Q_02 {

@@ -1,12 +1,10 @@
 package Big_O;
 
 /*
- *
  * The following code computes the [integer) square root of a number.
  * If the number is not a perfect square (there is no integer square root), then it returns -1
  * It does this by successive guessing. If n is 100, it first guesses 5O.
  * Too high? Try something lower - halfway between 1 and 5O. What is its runtime?
- *
  */
 
 public class Q_05 {

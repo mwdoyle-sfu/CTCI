@@ -3,7 +3,6 @@ package Big_O;
 /*
  * The following code performs integer division.
  * What is its runtime (assume a and b are both positive)?
- *
  */
 
 public class Q_04 {

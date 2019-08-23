@@ -3,7 +3,6 @@ package Big_O;
 /*
  * The following code computes the product of a and b.
  * What is its runtime?
- *
  */
 
 public class Q_01 {
