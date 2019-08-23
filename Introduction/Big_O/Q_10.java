@@ -1,5 +1,7 @@
 package Big_O;
-
+/*
+* The following code sums the digits in a number. What is its big 0 time?
+*/
 public class Q_10 {
     // The runtime will be the number of digits in the number
     // a number of d digits can have a value up to 10^d
