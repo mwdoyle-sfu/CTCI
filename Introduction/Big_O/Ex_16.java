@@ -8,11 +8,11 @@ public class Ex_16 {
 // Before the base case: O(n * n!)
 // Function call time: O(n)
 // Total run time: worst: O(n^2 * n!)
-    private static void permutation(String str) {
+    public static void permutation(String str) {
         permutation(str, "");
     }
 
-    private static void permutation(String str, String prefix) {
+    public static void permutation(String str, String prefix) {
         if (str.length() == 0){
             System.out.println(prefix);
         } else {

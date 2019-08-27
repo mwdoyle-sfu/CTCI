@@ -9,13 +9,13 @@ package Big_O;
 public class Q_11 {
     // where k is the length of the string and c is the number of characters in the alphabet
     // runtime is O(kc^k)
-    private static int numChars = 26;
+    public static int numChars = 26;
 
-    private static void printSortedStrings(int remaining) {
+    public static void printSortedStrings(int remaining) {
         printSortedStrings(remaining, "");
     }
 
-    private static void printSortedStrings(int remaining, String prefix) {
+    public static void printSortedStrings(int remaining, String prefix) {
         // building each string takes O(c^k) time
         if (remaining == 0) {
             if (isInOrder(prefix)) {
@@ -29,7 +29,7 @@ public class Q_11 {
         }
     }
 
-    private static boolean isInOrder(String s) {
+    public static boolean isInOrder(String s) {
         // checking each string is sorted takes O(k) time
         for (int i = 1; i < s.length(); i++) {
             int prev = ithLetter(s.charAt(i - 1));
@@ -41,7 +41,7 @@ public class Q_11 {
         return true;
     }
 
-    private static char ithLetter(int i) {
+    public static char ithLetter(int i) {
         return (char) (((int) 'a') + i);
     }
 

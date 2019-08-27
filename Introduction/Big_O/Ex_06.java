@@ -3,7 +3,7 @@ package Big_O;
 public class Ex_06 {
 // Run time: O(N)
 // Iterating through the array twice has no impact
-    private static void foo(int[] array) {
+    public static void foo(int[] array) {
         int sum = 0;
         int product = 1;
         for (int i = 0; i < array.length; i++) {

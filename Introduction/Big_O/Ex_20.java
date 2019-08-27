@@ -6,7 +6,7 @@ public class Ex_20 {
 // The number of times you can half n until you get to 1 is O(log n)
 // There are log n powers between 1 and n
 // Run time: O(log n)
-    private static int powersOf2(int n) {
+    public static int powersOf2(int n) {
         if (n == 1) {
             System.out.println(1);
             return 1;

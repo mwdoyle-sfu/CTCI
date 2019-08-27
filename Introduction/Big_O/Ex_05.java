@@ -6,7 +6,7 @@ public class Ex_05 {
 // Its not.
 // Run time: O(branches^depth)
 // Space complexity: O(N): Only O(N) branches exists at a time
-    private static int f(int n) {
+    public static int f(int n) {
         if (n <= 1) {
             return 1;
         }

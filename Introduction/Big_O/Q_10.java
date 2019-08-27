@@ -7,7 +7,7 @@ public class Q_10 {
     // a number of d digits can have a value up to 10^d
     // if n = 10^d, then d = log n
     // this means runtime is O(log n)
-    private static int sumDigits(int n) {
+    public static int sumDigits(int n) {
         int sum = 0;
         while (n > 0) {
             // modulo gives remainder

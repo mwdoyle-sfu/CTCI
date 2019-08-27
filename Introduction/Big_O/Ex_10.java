@@ -4,7 +4,7 @@ public class Ex_10 {
 // Notice the inner for loop goes to 10,000
 // This is just a constant unit of work
 // This means run time is still O(ab)
-    private static void printUnorderedPairs(int[] arrayA, int[] arrayB) {
+    public static void printUnorderedPairs(int[] arrayA, int[] arrayB) {
         for (int i = 0; i < arrayA.length; i++) {
             for (int j = 0; j < arrayB.length; j++) {
                 for (int k = 0; k < 1000; k++) {

@@ -9,12 +9,12 @@ package Big_O;
 
 public class Q_12 {
 
-    private static void mergesort(int[] array) {
+    public static void mergesort(int[] array) {
         int[] helper = new int[array.length];
         mergesort(array, helper, 0, array.length - 1);
     }
 
-    private static void mergesort(int[] array, int[] helper, int low, int high) {
+    public static void mergesort(int[] array, int[] helper, int low, int high) {
         if (low < high) {
             int middle = (low + high) / 2;
             mergesort(array, helper, low, middle); // Sort left half
@@ -23,7 +23,7 @@ public class Q_12 {
         }
     }
 
-    private static void merge(int[] array, int[] helper, int low, int middle, int high) {
+    public static void merge(int[] array, int[] helper, int low, int middle, int high) {
         /* Copy both halves into a helper array */
         for (int i = low; i <= high; i++) {
             helper[i] = array[i];
@@ -55,7 +55,7 @@ public class Q_12 {
         }
     }
 
-    private static int binarySearch(int[] a, int x) {
+    public static int binarySearch(int[] a, int x) {
         int low = 0;
         int high = a.length - 1;
         int mid;
@@ -73,7 +73,7 @@ public class Q_12 {
         return -1;
     }
 
-    private static int intersection(int[] a, int[] b) {
+    public static int intersection(int[] a, int[] b) {
         // time complexity of merge sort O(n log n)
         mergesort(b);
         int intersect = 0;

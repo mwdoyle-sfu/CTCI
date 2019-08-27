@@ -5,7 +5,7 @@ public class Ex_17 {
 // There are two branches per call with a depth of N
 // Run time: O(2^n) or more exactly O(1.6^n)
 // Note that algorithms with recursive calls usually have exponential run time
-    private static int fib(int n) {
+    public static int fib(int n) {
         // depth of N
         if (n <= 0) return 0;
         else if (n == 1) return 1;

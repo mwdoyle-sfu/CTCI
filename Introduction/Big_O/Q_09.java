@@ -8,7 +8,7 @@ package Big_O;
 
 public class Q_09 {
 
-    private static int[] copyArray(int[] array) {
+    public static int[] copyArray(int[] array) {
         int[] copy = new int[0];
         for (int value: array) {
             // At each iteration the number of copies increases by 1
@@ -19,7 +19,7 @@ public class Q_09 {
         return copy;
     }
 
-    private static int[] appendToNew(int[] array, int value) {
+    public static int[] appendToNew(int[] array, int value) {
         // copy all elements over to new array
         int[] bigger = new int[array.length + 1];
         for (int i = 0; i < array.length; i++) {

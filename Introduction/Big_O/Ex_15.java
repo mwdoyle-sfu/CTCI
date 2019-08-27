@@ -4,7 +4,7 @@ public class Ex_15 {
 // Computes n!
 // Run time: O(N)
 // Since it contains one recursive function
-    private static int factorial(int n) {
+    public static int factorial(int n) {
         if (n < 0) {
             return -1;
         }

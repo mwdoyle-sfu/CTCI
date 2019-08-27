@@ -8,7 +8,7 @@ package Big_O;
 // Stack space in recursive calls also takes space
 // Ex 1 takes O(n) space
 public class Ex_01 {
-    private static int sum(int n) {
+    public static int sum(int n) {
         if (n <= 0) {
             return 0;
         }

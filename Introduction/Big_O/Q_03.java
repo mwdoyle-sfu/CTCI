@@ -9,7 +9,7 @@ public class Q_03 {
 // Computes a % b
 // Run time: O(1)
 // Does a constant amount of work
-    private static int mod(int a, int b) {
+    public static int mod(int a, int b) {
         if (b <= 0) {
             return -1;
         }

@@ -9,7 +9,7 @@ public class Q_04 {
 // Performs integer division
 // Run time: O(a/b)
 // The loop iterates a/b times
-    private static int div(int a, int b) {
+    public static int div(int a, int b) {
         int count = 0;
         int sum = b;
         while (sum <= a) {

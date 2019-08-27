@@ -4,7 +4,7 @@ public class Ex_09 {
 // Notice there are now 2 separate arrays
 // You may think the runtime is O(N^2). It is a common mistake.
 // It is actually O(ab)
-    private static void printUnorderedPairs(int[] arrayA, int[] arrayB) {
+    public static void printUnorderedPairs(int[] arrayA, int[] arrayB) {
         for (int i = 0; i < arrayA.length; i++) {
             for (int j = 0; j < arrayB.length; j++) {
                 // The if-statement is O(1)

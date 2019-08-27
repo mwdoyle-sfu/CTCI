@@ -3,7 +3,7 @@ package Big_O;
 // Just because there are O(n) calls
 // doesnt mean it takes O(n) space
 public class Ex_02 {
-    private static int pairSumSequence(int n) {
+    public static int pairSumSequence(int n) {
         int sum = 0;
         for (int i = 0; i < n; i++) {
             sum += pairSum(i, i + 1);
@@ -16,7 +16,7 @@ public class Ex_02 {
 
 // O(n) calls to pairSum but they dont happen simultaneously
 // O(1) space is achieved
-    private static int pairSum(int a, int b) {
+    public static int pairSum(int a, int b) {
         return a + b;
     }
 

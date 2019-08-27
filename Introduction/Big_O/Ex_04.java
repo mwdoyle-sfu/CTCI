@@ -3,7 +3,7 @@ package Big_O;
 // Add O(A + B)
 // Do this then when done, do that
 public class Ex_04 {
-    private static void foo(int[] arrA, int[] arrB) {
+    public static void foo(int[] arrA, int[] arrB) {
         for (int a : arrA) {
             System.out.println(a);
         }
@@ -14,7 +14,7 @@ public class Ex_04 {
 
 // Multiply O(A * B)
 // Do this for each time you do that
-    private static void bar(int[] arrA, int[] arrB) {
+    public static void bar(int[] arrA, int[] arrB) {
         for (int a : arrA) {
             for (int b : arrB) {
                 System.out.println(a + "," + b);

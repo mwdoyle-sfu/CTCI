@@ -5,7 +5,7 @@ package Big_O;
 // The other has two for loops
 // Counting instructions is pointless unless using assembly
 public class Ex_03 {
-    private static void minAndMax1(int[] array) {
+    public static void minAndMax1(int[] array) {
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
         for (int x : array) {
@@ -17,7 +17,7 @@ public class Ex_03 {
 
 // Two (non-nested) for loops could be described as O(2N)
 // In big O we drop the constants so this function is O(N)
-    private static void minAndMax2(int[] array) {
+    public static void minAndMax2(int[] array) {
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
         for (int x : array) {

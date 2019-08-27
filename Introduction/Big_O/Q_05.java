@@ -11,11 +11,11 @@ public class Q_05 {
     // This is similar to a binary search which has O(log n) runtime
     // Notice that the range is divided by two on each iteration
 
-    private static int sqrt(int n) {
+    public static int sqrt(int n) {
         return sqrt_helper(n, 1, n);
     }
 
-    private static int sqrt_helper(int n, int min, int max) {
+    public static int sqrt_helper(int n, int min, int max) {
         if (max < min) return -1;   // no square root
 
         int guess = (min + max) / 2;

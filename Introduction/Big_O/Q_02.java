@@ -8,7 +8,7 @@ package Big_O;
 public class Q_02 {
 // This prints a^b
 // Run time: O(b) the recursive code iterates through b calls
-    private static int power(int a, int b) {
+    public static int power(int a, int b) {
         if (b < 0) {
             return 0; // error
         } else if (b == 0) {

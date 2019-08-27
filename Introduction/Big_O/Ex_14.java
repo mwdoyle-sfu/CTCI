@@ -2,7 +2,7 @@ package Big_O;
 
 public class Ex_14 {
 // Run time: O(sqrt(n))
-    private static boolean isPrime(int n) {
+    public static boolean isPrime(int n) {
         // This loop stops when x equals the square root of n
         for (int x = 2; x * x <= n; x++) {
             // Constant time O(1)
