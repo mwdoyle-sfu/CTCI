@@ -17,8 +17,9 @@ public class LinkedList {
         }
     }
 
-    // insert method
-    public static LinkedList insert(LinkedList list, int data) {
+    // append
+    // time complexity: O(1) or O(n)
+    public static LinkedList insertTail(LinkedList list, int data) {
         // create new node
         Node new_node = new Node(data);
         new_node.next = null;
@@ -38,6 +39,17 @@ public class LinkedList {
 
         // return the list by the head
         return list;
+    }
+
+    // push
+    // time complexity: O(1)
+    public void push(int new_data) {
+        // create new node
+        Node new_node = new Node(new_data);
+        // make next node head
+        new_node.next = head;
+        // make  head point to new node
+        head = new_node;
     }
 
     // delete by key
@@ -97,8 +109,8 @@ public class LinkedList {
         // start with the empty list
         LinkedList list = new LinkedList();
 
-        list = insert(list, 1);
-        list = insert(list, 2);
+        list = insertTail(list, 1);
+        list = insertTail(list, 2);
 
         printList(list);
 
