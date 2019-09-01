@@ -1,10 +1,10 @@
 package Sinlgly_Linked_List;
 
 public class LinkedList2 {
-    static Node head;
+    static Node head, head2;
 
     // Node class
-    class Node {
+    static class Node {
         int data;
         Node next;
 
@@ -333,6 +333,52 @@ public class LinkedList2 {
         ptr2.next = null;
     }
 
+    // add the contents of two linked lists
+    Node addTwoLists(Node first, Node second) {
+        Node res = null;    // head of node of result list
+        Node prev = null;
+        Node temp = null;
+        int carry = 0, sum;
+
+        while (first != null || second != null) {
+            // calculate the value of next digit in result list
+            // the next digit is the sum of the following
+            // (i) carry
+            // (ii) next digit of first list (if it exists)
+            // (iii) next digit of second list (if it exists)
+            sum = carry + (first != null? first.data : 0)
+                    + (second != null ? second.data : 0);
+
+            // update the carry for next calculation
+            carry = (sum >= 10) ? 1 : 0;
+            // update sum if it is greater than 10
+            sum = sum % 10;
+            // create a new node with sum as data
+            temp = new Node(sum);
+            // if this is the first node then set it as head of result list
+            if (res == null) {
+                res = temp;
+            } else {    //if this is not the first node then connect it to the rest
+                prev.next = temp;
+            }
+            // set prev for insertion
+            prev = temp;
+            // move first and second pointers to next nodes
+            if (first != null) {
+                first = first.next;
+            }
+            if (second != null) {
+                second = second.next;
+            }
+        }
+        if (carry > 0) {
+            temp.next = new Node(carry);
+        }
+
+        // return head of result list
+        return res;
+    }
+
     // function to print contents of linked list
     public void printList() {
         Node tempNode = head;
@@ -342,6 +388,14 @@ public class LinkedList2 {
         }
     }
 
+    // funtion to print contents of a given linked list
+    public void printGivenList(Node head) {
+        while (head != null) {
+            System.out.print(head.data + " ");
+            head = head.next;
+        }
+        System.out.println("");
+    }
 
     // main
     public static void main(String[] args) {
@@ -363,8 +417,41 @@ public class LinkedList2 {
         test07(llist);
         // detect and remove a loop
         test08(llist);
+        // add two numbers represented by linked lists
+        test09(llist);
 
 
+    }
+
+    private static void test09(LinkedList2 llist) {
+        // add two numbers represented by linked lists
+        // create first list
+        System.out.println("\n Create new lists: ");
+        head = null;
+        head = new Node(7);
+        head.next = new Node(5);
+        head.next.next = new Node(9);
+        head.next.next.next = new Node(4);
+        head.next.next.next.next = new Node(6);
+        System.out.print("First List: ");
+        llist.printGivenList(head);
+
+        // create second list
+        head2 = new Node(8);
+        head2.next = new Node(4);
+        System.out.print("Second List: ");
+        llist.printGivenList(head2);
+
+        /*
+         * Input: List1: 7->5->9->4->6  // represents number 64957
+         * List2: 8->4 //  represents number 48
+         * Output: Resultant list: 5->0->0->5->6  // represents number 65005
+         */
+
+        // add results of the two lists
+        Node result = llist.addTwoLists(head, head2);
+        System.out.print("Resulting List: ");
+        llist.printGivenList(result);
     }
 
     private static void test08(LinkedList2 llist) {
